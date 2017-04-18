@@ -8,7 +8,7 @@ RUN echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDjyxTTHfUbpdJ+1Ia/ba+HsjMZhITD7A
 RUN chmod 644 /root/authorized_keys
 
 RUN sed -ri 's/^PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
-RUN sed -ri 's/PasswordAuthentication yes/#PasswordAuthentication yes/g' /etc/ssh/sshd_config
+RUN sed -ri 's/PasswordAuthentication yes/PasswordAuthentication no/g' /etc/ssh/sshd_config
 
 EXPOSE 22
 
