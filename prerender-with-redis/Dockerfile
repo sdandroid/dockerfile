@@ -1,6 +1,6 @@
-FROM node:alpine
+FROM node
 RUN mkdir /data && cd /data \
-&& git clone git@github.com:sdandroid/prerender.git \
+&& git clone https://github.com/sdandroid/prerender.git \
 && cd prerender \
 && npm install
 
