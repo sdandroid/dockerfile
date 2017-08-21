@@ -80,7 +80,7 @@ RUN mkdir /data && chown -R headless:headless /data
 USER headless
 
 RUN  cd /data \
-&& git clone -b chrome https://github.com/sdandroid/prerender.git \
+&& git clone -b chrome https://github.com/prerender/prerender.git \
 && cd prerender \
 && npm install
 
