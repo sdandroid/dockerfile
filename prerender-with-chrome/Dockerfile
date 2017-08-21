@@ -3,7 +3,7 @@ FROM debian:stable
 
 RUN apt-get update -qqy \
   && apt-get -qqy install \
-  &&    dumb-init gnupg wget ca-certificates apt-transport-https  \
+  &&   gnupg wget ca-certificates apt-transport-https  \
   &&    ttf-wqy-zenhei \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
