@@ -22,6 +22,8 @@ RUN useradd headless --shell /bin/bash --create-home \
 
 RUN mkdir /data && chown -R headless:headless /data
 
+USER headless
+
 ENV NPM_CONFIG_LOGLEVEL info
 ENV NODE_VERSION 8.4.0
 ENV ARCH=x64
@@ -30,8 +32,6 @@ RUN wget  "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARC
   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 \
   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz"  \
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
-
-USER headless
 
 RUN  cd /data \
 && git clone -b chrome https://github.com/prerender/prerender.git \
