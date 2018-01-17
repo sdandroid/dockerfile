@@ -34,7 +34,7 @@ RUN wget  "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARC
   && ln -s /usr/local/bin/node /usr/local/bin/nodejs
 
 RUN  cd /data \
-&& git clone -b chrome https://github.com/prerender/prerender.git \
+&& git clone https://github.com/prerender/prerender.git \
 && cd prerender \
 && npm install
 
