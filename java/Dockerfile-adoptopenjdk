@@ -1,5 +1,5 @@
 FROM adoptopenjdk:11-jdk-hotspot
-RUN apt-get update -qqy  && apt-get -qqy install file binutils libjemalloc-dev \
+RUN apt-get update -qqy  && apt-get -qqy install file binutils libjemalloc-dev graphviz \
       --no-install-recommends \
      && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
